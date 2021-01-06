@@ -1,0 +1,63 @@
+\documentclass{article}
+
+%Packages
+\usepackage[top=2cm,left=1cm,right=2cm,bottom=2cm,columnsep=1cm]{geometry}%Page layout
+\usepackage{graphicx}										% figures
+\usepackage{url}											% URLs
+\usepackage[usenames,dvipsnames]{xcolor}					% color
+\usepackage{multicol}										% columns env.
+	%\setlength{\multicolsep}{0pt}
+	\setlength{\columnsep}{-5cm}
+\usepackage{paralist}										% compact lists
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+%\usepackage{marvosym}
+\usepackage{fontawesome}
+\usepackage{fontspec}
+\usepackage{enumitem}
+%\usepackage{parallel}
+%\usepackage[framemethod=tikz]{mdframed}
+%\newmdenv [font=\footnotesize,leftmargin=-0.2cm,rightmargin=0.0cm]{cvbox}
+%commands
+\newcommand{\last}{\\ \\}
+\newcommand{\Sep}{\vspace{1em}}
+\newcommand{\SmallSep}{\vspace{0.5em}}
+\newcommand{\hsmallsep}{\hspace{0.5em}}
+\newcommand{\hsep}{\hspace{1em}}
+\newcommand{\hhsep}{\hspace{2em}}
+\newcommand\uline{\color{orange}\rule{\linewidth}{2pt}\color{black}}
+\newcommand{\CVSection}[1]{\Large\bfseries\textbf{\color{MidnightBlue}#1}\par\SmallSep\normalsize\normalfont\color{black}}
+\newcommand{\CVItem}[1]{\textbf{\color{RoyalBlue} #1\\}\color{black}\normalsize\normalfont}
+\pagenumbering{gobble}
+\begin{document}
+	\begin{minipage}[t]{0.33\textwidth}
+% Left
+		\input{photo}
+		\input{language}
+		\input{skills}
+		\input{certification}
+	\end{minipage}
+	\color{orange}{\vrule width 1.5pt}\hsep
+	\begin{minipage}[t]{0.66\textwidth}
+% Right
+		\input{title}
+		\input{education}
+		\input{experience_zf}
+	\end{minipage}
+
+	\begin{minipage}[t]{0.33\textwidth}
+% Left
+		\input{hobby}
+		\input{reference}
+	\end{minipage}
+	\color{orange}{\vrule width 1.5pt}\hsep
+	\begin{minipage}[t]{0.66\textwidth}
+% Right
+		\input{experience_zf2}
+		\input{experience_magna}
+		\input{projects}
+		\input{awards}
+	\end{minipage}
+
+
+\end{document}
